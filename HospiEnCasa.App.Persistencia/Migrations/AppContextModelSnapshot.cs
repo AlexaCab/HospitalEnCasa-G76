@@ -265,6 +265,27 @@ namespace HospiEnCasa.App.Persistencia.Migrations
                     b.ToTable("SugerenciasCuidados");
                 });
 
+            modelBuilder.Entity("HospiEnCasa.App.Dominio.Usuario", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("Password")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("User")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Usuarios");
+                });
+
             modelBuilder.Entity("HospiEnCasa.App.Dominio.FamiliarDesignado", b =>
                 {
                     b.HasOne("HospiEnCasa.App.Dominio.Paciente", null)

@@ -14,7 +14,7 @@ public class Program
    {
       Console.WriteLine("Hello, World!");
 
-      //AdicionarPaciente();
+      AdicionarPaciente();
       //BuscarPaciente();
       //VerListadoPacientes();
       //AdicionarMedico();
@@ -25,7 +25,7 @@ public class Program
       //BuscarFamiliarDesignado();
       //EscogerMedico();
       //EscogerEnfermera();
-      AdicionarSignoVital();
+      //AdicionarSignoVital();
       //BuscarSignoVital();
    }
 
@@ -76,15 +76,15 @@ public class Program
    {
       Console.WriteLine("Adicionando un Paciente");
       Paciente paciente = new Paciente();
-      paciente.Nombre = "Ale";
-      paciente.Apellido = "Cabas";
+      paciente.Nombre = "Mario";
+      paciente.Apellido = "Gutierrez";
       paciente.Telefono = "315282567";
-      paciente.Genero = Genero.femenino;
+      paciente.Genero = Genero.masculino;
       paciente.Direccion = "Calle 256No. 13-48";
-      paciente.Ciudad = "Santa Marta";
+      paciente.Ciudad = "Medellin";
       paciente.FechaNacimiento = DateTime.Now;
-      paciente.MedicoId = 1;
-      paciente.EnfermeraId = 1;
+      paciente.MedicoId = 2;
+      paciente.EnfermeraId = 2;
 
       _repositorioPaciente.AddPaciente(paciente);
       Console.WriteLine("Paciente Adicionado Correctamente");
